@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Ideation Tool | Jiyanshi Devmurari</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="scroll-progress"><span></span></div>
+    <header>
+        <div class="container header-flex">
+            <div class="site-title">
+                <img class="site-logo" src="assets/youtube.svg" data-logo="assets/channel-logo.png" alt="Code Tide Logo">
+                <div>
+                    <h1>Jiyanshi Devmurari</h1>
+                    <p class="tagline">Emerging AI & Prompt Engineering Professional</p>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Primary">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#resources">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" aria-label="Toggle dark/light mode">🌙</button>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="orb o1" aria-hidden="true"></div>
+            <div class="orb o2" aria-hidden="true"></div>
+            <img class="hero-ai" src="assets/ai.png" alt="AI illustration" loading="eager">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h2 class="hero-title">Content Ideation Tool</h2>
+                    <p class="hero-subtitle">Generate content outlines and scripts tailored to your audience level. Create engaging content ideas with AI-powered suggestions.</p>
+                    <div class="hero-ctas">
+                        <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                        <a href="#demo" class="btn btn-primary">Generate Ideas</a>
+                    </div>
+                </div>
+                <ul class="hero-highlights" aria-label="Features">
+                    <li><span>Smart Outlines</span><small>Structured content frameworks</small></li>
+                    <li><span>Audience Targeting</span><small>Tailored to skill levels</small></li>
+                    <li><span>Multiple Formats</span><small>Blogs, videos, tutorials & more</small></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="demo" class="demo-section">
+            <div class="container">
+                <h2>Content Generator</h2>
+                <div class="generator-interface">
+                    <div class="input-panel">
+                        <div class="form-group">
+                            <label for="topicInput">Content Topic</label>
+                            <input type="text" id="topicInput" placeholder="e.g., Machine Learning for Beginners, React Hooks Tutorial, Python Data Analysis">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contentType">Content Type</label>
+                                <select id="contentType">
+                                    <option value="blog">Blog Post</option>
+                                    <option value="video">Video Script</option>
+                                    <option value="tutorial">Tutorial</option>
+                                    <option value="presentation">Presentation</option>
+                                    <option value="social">Social Media</option>
+                                    <option value="newsletter">Newsletter</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="audienceLevel">Audience Level</label>
+                                <select id="audienceLevel">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                    <option value="mixed">Mixed Audience</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contentLength">Content Length</label>
+                                <select id="contentLength">
+                                    <option value="short">Short (5-10 min read)</option>
+                                    <option value="medium">Medium (10-20 min read)</option>
+                                    <option value="long">Long (20+ min read)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="toneStyle">Tone & Style</label>
+                                <select id="toneStyle">
+                                    <option value="professional">Professional</option>
+                                    <option value="casual">Casual & Friendly</option>
+                                    <option value="educational">Educational</option>
+                                    <option value="conversational">Conversational</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalNotes">Additional Requirements (Optional)</label>
+                            <textarea id="additionalNotes" rows="3" placeholder="Any specific requirements, key points to cover, or constraints..."></textarea>
+                        </div>
+
+                        <button id="generateBtn" class="btn btn-primary">
+                            <span class="btn-text">Generate Content Ideas</span>
+                            <span class="btn-loading" style="display: none;">Creating...</span>
+                        </button>
+                    </div>
+
+                    <div class="output-panel">
+                        <div id="contentOutput" class="content-results">
+                            <div class="placeholder-content">
+                                <h3>Your Content Ideas Will Appear Here</h3>
+                                <p>Fill in the form and click "Generate Content Ideas" to get:</p>
+                                <ul>
+                                    <li>Detailed content outline</li>
+                                    <li>Key talking points</li>
+                                    <li>Audience-specific suggestions</li>
+                                    <li>Engagement strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="output-actions" style="display: none;">
+                            <button id="copyOutlineBtn" class="btn btn-outline">Copy Outline</button>
+                            <button id="generateMoreBtn" class="btn btn-outline">Generate More Ideas</button>
+                            <button id="clearOutputBtn" class="btn btn-outline">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="templates" class="templates-section">
+            <div class="container">
+                <h2>Quick Templates</h2>
+                <div class="templates-grid">
+                    <div class="template-card" data-template="tech-tutorial">
+                        <h3>Tech Tutorial</h3>
+                        <p>Step-by-step technical guides and programming tutorials</p>
+                        <button class="template-btn">Use Template</button>
+                    </div>
+                    <div class="template-card" data-template="ai-explainer">
+                        <h3>AI Explainer</h3>
+                        <p>Breaking down complex AI concepts for different audiences</p>
+                        <button class="template-btn">Use Template</button>
+                    </div>
+                    <div class="template-card" data-template="project-showcase">
+                        <h3>Project Showcase</h3>
+                        <p>Presenting your projects and development process</p>
+                        <button class="template-btn">Use Template</button>
+                    </div>
+                    <div class="template-card" data-template="career-advice">
+                        <h3>Career Advice</h3>
+                        <p>Professional development and career guidance content</p>
+                        <button class="template-btn">Use Template</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>Content Creation Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Audience Targeting</h3>
+                        <p>Content suggestions tailored to your specific audience level and interests.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📋</div>
+                        <h3>Structured Outlines</h3>
+                        <p>Well-organized content frameworks that ensure logical flow and engagement.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💡</div>
+                        <h3>Creative Ideas</h3>
+                        <p>Fresh perspectives and unique angles to make your content stand out.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started" class="get-started">
+            <h2>Ready to Create Amazing Content?</h2>
+            <div class="cta-content">
+                <p>This tool demonstrates AI-powered content ideation. I can help you build custom content generation systems for your specific needs and brand voice.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Build Custom Content Tools</a>
+                    <a href="index.html#services" class="btn btn-secondary">Content Strategy Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jiyanshi Devmurari. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
+    <script src="content-ideation.js"></script>
+</body>
+</html>

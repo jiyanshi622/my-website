@@ -599,6 +599,577 @@ section:nth-of-type(8) { animation-delay: 1.4s; }
     background: rgba(17, 24, 39, 0.8);
 }
 
+/* Project Demo Pages Styles */
+.demo-section {
+    margin-bottom: 3rem;
+}
+
+.demo-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.demo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.input-section, .output-section {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.input-section h3, .output-section h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+#noteInput {
+    width: 100%;
+    min-height: 200px;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.options-panel {
+    margin-bottom: 1.5rem;
+}
+
+.options-panel h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.option-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.option-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.length-control {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.length-control select {
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.4rem;
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+}
+
+.output-box {
+    min-height: 300px;
+    padding: 1.5rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.placeholder-text {
+    text-align: center;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.summary-result {
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.output-actions {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.error-message {
+    color: #ef4444;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Features Section for Projects */
+.features-section {
+    background: var(--color-card);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+}
+
+.features-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+}
+
+/* Examples Section */
+.examples-section {
+    margin-bottom: 3rem;
+}
+
+.examples-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.example-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.example-card:hover {
+    transform: translateY(-4px);
+}
+
+.example-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+}
+
+.example-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.example-btn:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* RAG Assistant Styles */
+.knowledge-base-panel {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.knowledge-base-panel h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.document-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+}
+
+.document-item.active {
+    border-color: var(--color-primary);
+    background: rgba(58, 122, 254, 0.05);
+}
+
+.doc-icon {
+    font-size: 1.2rem;
+}
+
+.doc-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.doc-status {
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    background: rgba(58, 122, 254, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.3rem;
+}
+
+.chat-interface {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: var(--color-bg-alt);
+}
+
+.message {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.message-content {
+    flex: 1;
+    line-height: 1.6;
+}
+
+.user-message {
+    flex-direction: row-reverse;
+}
+
+.user-message .message-avatar {
+    background: var(--color-primary);
+    color: white;
+}
+
+.citations {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(58, 122, 254, 0.05);
+    border-radius: 0.5rem;
+    border-left: 3px solid var(--color-primary);
+}
+
+.citations h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.citation {
+    margin-bottom: 0.8rem;
+}
+
+.citation strong {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.citation p {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 0.3rem;
+}
+
+.chat-input-container {
+    padding: 1rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.input-wrapper input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+}
+
+.quick-questions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.quick-question {
+    padding: 0.4rem 0.8rem;
+    background: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quick-question:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* Content Ideation Tool Styles */
+.generator-interface {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.input-panel, .output-panel {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+    font-family: var(--font-main);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.content-results {
+    min-height: 400px;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.placeholder-content {
+    text-align: center;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.content-results-display .result-section {
+    margin-bottom: 2rem;
+}
+
+.content-results-display h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.title-list,
+.key-points-list,
+.engagement-list,
+.suggestions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.title-list li,
+.key-points-list li,
+.engagement-list li,
+.suggestions-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.title-list li:last-child,
+.key-points-list li:last-child,
+.engagement-list li:last-child,
+.suggestions-list li:last-child {
+    border-bottom: none;
+}
+
+.outline-structure {
+    background: var(--color-bg);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.outline-item {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.outline-item:last-child {
+    border-bottom: none;
+}
+
+.templates-section {
+    margin-bottom: 3rem;
+}
+
+.templates-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.template-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.template-card:hover {
+    transform: translateY(-4px);
+}
+
+.template-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+}
+
+.template-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.template-btn:hover {
+    background: var(--color-link-hover);
+}
+
+/* Benefits Section */
+.benefits-section {
+    margin-bottom: 3rem;
+}
+
+.benefits-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.benefit-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+}
+
+/* Dark theme support for project pages */
+[data-theme="dark"] .input-section,
+[data-theme="dark"] .output-section,
+[data-theme="dark"] .input-panel,
+[data-theme="dark"] .output-panel,
+[data-theme="dark"] .features-section,
+[data-theme="dark"] .knowledge-base-panel,
+[data-theme="dark"] .chat-interface,
+[data-theme="dark"] .example-card,
+[data-theme="dark"] .template-card,
+[data-theme="dark"] .benefit-card {
+    background: rgba(35, 42, 54, 0.7);
+    border: 1px solid rgba(123, 182, 255, 0.10);
+}
+
 /* Responsive for new grids */
 @media (max-width: 700px) {
     .hero-grid { grid-template-columns: 1fr; }

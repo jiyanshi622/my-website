@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Knowledge Assistant | Jiyanshi Devmurari</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="scroll-progress"><span></span></div>
+    <header>
+        <div class="container header-flex">
+            <div class="site-title">
+                <img class="site-logo" src="assets/youtube.svg" data-logo="assets/channel-logo.png" alt="Code Tide Logo">
+                <div>
+                    <h1>Jiyanshi Devmurari</h1>
+                    <p class="tagline">Emerging AI & Prompt Engineering Professional</p>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Primary">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#resources">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" aria-label="Toggle dark/light mode">🌙</button>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="orb o1" aria-hidden="true"></div>
+            <div class="orb o2" aria-hidden="true"></div>
+            <img class="hero-ai" src="assets/ai.png" alt="AI illustration" loading="eager">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h2 class="hero-title">RAG Knowledge Assistant</h2>
+                    <p class="hero-subtitle">Retrieval-augmented assistant for course material with transparent citations. Ask questions and get accurate answers backed by your documents.</p>
+                    <div class="hero-ctas">
+                        <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                        <a href="#demo" class="btn btn-primary">Try Assistant</a>
+                    </div>
+                </div>
+                <ul class="hero-highlights" aria-label="Features">
+                    <li><span>Document Search</span><small>Find relevant information instantly</small></li>
+                    <li><span>Cited Answers</span><small>Transparent source references</small></li>
+                    <li><span>Context Aware</span><small>Understands your knowledge base</small></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="demo" class="demo-section">
+            <div class="container">
+                <h2>Knowledge Base Assistant</h2>
+                
+                <div class="knowledge-base-panel">
+                    <h3>Available Documents</h3>
+                    <div class="document-list">
+                        <div class="document-item active" data-doc="ai-basics">
+                            <span class="doc-icon">📄</span>
+                            <span class="doc-name">AI Fundamentals Guide</span>
+                            <span class="doc-status">Loaded</span>
+                        </div>
+                        <div class="document-item active" data-doc="prompt-engineering">
+                            <span class="doc-icon">📄</span>
+                            <span class="doc-name">Prompt Engineering Best Practices</span>
+                            <span class="doc-status">Loaded</span>
+                        </div>
+                        <div class="document-item active" data-doc="llm-guide">
+                            <span class="doc-icon">📄</span>
+                            <span class="doc-name">Large Language Models Overview</span>
+                            <span class="doc-status">Loaded</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-interface">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message assistant-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>Hello! I'm your RAG Knowledge Assistant. I can answer questions about AI fundamentals, prompt engineering, and large language models based on the loaded documents.</p>
+                                <p>Try asking me something like:</p>
+                                <ul>
+                                    <li>"What is prompt engineering?"</li>
+                                    <li>"How do large language models work?"</li>
+                                    <li>"What are the best practices for AI development?"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <div class="input-wrapper">
+                            <input type="text" id="questionInput" placeholder="Ask a question about the loaded documents..." />
+                            <button id="askBtn" class="btn btn-primary">
+                                <span class="btn-text">Ask</span>
+                                <span class="btn-loading" style="display: none;">Thinking...</span>
+                            </button>
+                        </div>
+                        <div class="quick-questions">
+                            <button class="quick-question" data-question="What is prompt engineering?">What is prompt engineering?</button>
+                            <button class="quick-question" data-question="How do LLMs generate text?">How do LLMs generate text?</button>
+                            <button class="quick-question" data-question="What are AI safety considerations?">What are AI safety considerations?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>How RAG Works</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Retrieval</h3>
+                        <p>Searches through your knowledge base to find the most relevant documents and passages for your question.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Augmentation</h3>
+                        <p>Combines retrieved information with AI reasoning to provide comprehensive, contextual answers.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📝</div>
+                        <h3>Generation</h3>
+                        <p>Generates accurate responses with clear citations showing exactly where the information came from.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="benefits-section">
+            <div class="container">
+                <h2>Key Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Accurate Information</h3>
+                        <p>Answers are grounded in your actual documents, reducing hallucinations and ensuring reliability.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Source Transparency</h3>
+                        <p>Every answer includes citations so you can verify information and explore further.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Scalable Knowledge</h3>
+                        <p>Works with large document collections, making vast knowledge bases instantly searchable.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Context Preservation</h3>
+                        <p>Maintains conversation context while staying grounded in your specific knowledge base.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started" class="get-started">
+            <h2>Ready to Build Your Knowledge Assistant?</h2>
+            <div class="cta-content">
+                <p>This demonstration shows the power of RAG systems. I can help you build custom knowledge assistants for your organization's documents and data.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Build Custom RAG System</a>
+                    <a href="index.html#services" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jiyanshi Devmurari. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
+    <script src="rag-assistant.js"></script>
+</body>
+</html>
