@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Explorer | Jiyanshi Devmurari</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="scroll-progress"><span></span></div>
+    <header>
+        <div class="container header-flex">
+            <div class="site-title">
+                <img class="site-logo" src="assets/youtube.svg" data-logo="assets/channel-logo.png" alt="Code Tide Logo">
+                <div>
+                    <h1>Jiyanshi Devmurari</h1>
+                    <p class="tagline">Emerging AI & Prompt Engineering Professional</p>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Primary">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#resources">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" aria-label="Toggle dark/light mode">🌙</button>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="orb o1" aria-hidden="true"></div>
+            <div class="orb o2" aria-hidden="true"></div>
+            <img class="hero-ai" src="assets/ai.png" alt="AI illustration" loading="eager">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h2 class="hero-title">AI Tools Explorer</h2>
+                    <p class="hero-subtitle">Discover powerful AI tools that I recommend and use regularly. From conversational AI to creative tools, find the right solution for your needs.</p>
+                    <div class="hero-ctas">
+                        <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                        <a href="contact.html" class="btn btn-primary">Get Recommendations</a>
+                    </div>
+                </div>
+                <ul class="hero-highlights" aria-label="Tool Categories">
+                    <li><span>Conversational AI</span><small>ChatGPT, Claude, Gemini & more</small></li>
+                    <li><span>Creative Tools</span><small>Design, content & code generation</small></li>
+                    <li><span>Productivity</span><small>Research, writing & automation</small></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="conversational-ai" class="ai-tools-section">
+            <h2>Conversational AI</h2>
+            <div class="tools-grid">
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>ChatGPT</h3>
+                        <span class="tool-badge">Popular</span>
+                    </div>
+                    <p class="tool-description">OpenAI's powerful conversational AI model. Excellent for coding assistance, writing, analysis, and creative tasks. Supports GPT-4 with advanced reasoning capabilities.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Code Generation</span>
+                        <span class="feature-tag">Writing</span>
+                        <span class="feature-tag">Analysis</span>
+                    </div>
+                    <a href="https://chat.openai.com" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try ChatGPT</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Claude</h3>
+                        <span class="tool-badge">Recommended</span>
+                    </div>
+                    <p class="tool-description">Anthropic's AI assistant known for thoughtful, nuanced responses. Excellent for complex reasoning, ethical discussions, and detailed analysis with strong safety features.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Reasoning</span>
+                        <span class="feature-tag">Safety</span>
+                        <span class="feature-tag">Analysis</span>
+                    </div>
+                    <a href="https://claude.ai" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Claude</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Google Gemini</h3>
+                        <span class="tool-badge">Multimodal</span>
+                    </div>
+                    <p class="tool-description">Google's advanced AI model with strong multimodal capabilities. Great for text, image, and code understanding with integration to Google services.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Multimodal</span>
+                        <span class="feature-tag">Google Integration</span>
+                        <span class="feature-tag">Real-time Data</span>
+                    </div>
+                    <a href="https://gemini.google.com" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Gemini</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Perplexity</h3>
+                        <span class="tool-badge">Research</span>
+                    </div>
+                    <p class="tool-description">AI-powered search engine that provides accurate, cited answers. Perfect for research, fact-checking, and getting up-to-date information with sources.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Search</span>
+                        <span class="feature-tag">Citations</span>
+                        <span class="feature-tag">Real-time</span>
+                    </div>
+                    <a href="https://perplexity.ai" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Perplexity</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="creative-tools" class="ai-tools-section">
+            <h2>Creative & Design Tools</h2>
+            <div class="tools-grid">
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Canva</h3>
+                        <span class="tool-badge">Design</span>
+                    </div>
+                    <p class="tool-description">AI-powered design platform for creating presentations, social media graphics, logos, and more. Features Magic Design and AI-generated content suggestions.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Graphic Design</span>
+                        <span class="feature-tag">Templates</span>
+                        <span class="feature-tag">AI Magic</span>
+                    </div>
+                    <a href="https://canva.com" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Canva</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>DALL-E 3</h3>
+                        <span class="tool-badge">Image Gen</span>
+                    </div>
+                    <p class="tool-description">OpenAI's advanced image generation model. Creates high-quality, detailed images from text descriptions with improved prompt understanding.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Image Generation</span>
+                        <span class="feature-tag">High Quality</span>
+                        <span class="feature-tag">Text to Image</span>
+                    </div>
+                    <a href="https://openai.com/dall-e-3" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try DALL-E</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Midjourney</h3>
+                        <span class="tool-badge">Artistic</span>
+                    </div>
+                    <p class="tool-description">AI art generator known for creating stunning, artistic images. Excellent for creative projects, concept art, and high-quality visual content.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Artistic Style</span>
+                        <span class="feature-tag">High Quality</span>
+                        <span class="feature-tag">Creative</span>
+                    </div>
+                    <a href="https://midjourney.com" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Midjourney</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Runway ML</h3>
+                        <span class="tool-badge">Video</span>
+                    </div>
+                    <p class="tool-description">AI-powered video editing and generation platform. Create videos from text, edit with AI, and generate visual effects with cutting-edge technology.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Video Generation</span>
+                        <span class="feature-tag">AI Editing</span>
+                        <span class="feature-tag">Effects</span>
+                    </div>
+                    <a href="https://runwayml.com" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Runway</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="coding-tools" class="ai-tools-section">
+            <h2>Coding & Development</h2>
+            <div class="tools-grid">
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>GitHub Copilot</h3>
+                        <span class="tool-badge">Coding</span>
+                    </div>
+                    <p class="tool-description">AI pair programmer that suggests code completions and entire functions. Integrates directly into your IDE for seamless coding assistance.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Code Completion</span>
+                        <span class="feature-tag">IDE Integration</span>
+                        <span class="feature-tag">Multi-language</span>
+                    </div>
+                    <a href="https://github.com/features/copilot" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Copilot</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Cursor</h3>
+                        <span class="tool-badge">Editor</span>
+                    </div>
+                    <p class="tool-description">AI-first code editor built for productivity. Features intelligent code completion, AI chat, and seamless integration with modern development workflows.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">AI Editor</span>
+                        <span class="feature-tag">Chat Integration</span>
+                        <span class="feature-tag">Productivity</span>
+                    </div>
+                    <a href="https://cursor.sh" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Cursor</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Replit</h3>
+                        <span class="tool-badge">Platform</span>
+                    </div>
+                    <p class="tool-description">Online IDE with AI-powered coding assistance. Build, run, and deploy applications directly in the browser with collaborative features.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Online IDE</span>
+                        <span class="feature-tag">Collaboration</span>
+                        <span class="feature-tag">Deployment</span>
+                    </div>
+                    <a href="https://replit.com" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Replit</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Tabnine</h3>
+                        <span class="tool-badge">Assistant</span>
+                    </div>
+                    <p class="tool-description">AI code completion tool that learns from your codebase. Provides personalized suggestions and supports multiple programming languages and IDEs.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Personalized</span>
+                        <span class="feature-tag">Multi-IDE</span>
+                        <span class="feature-tag">Privacy-focused</span>
+                    </div>
+                    <a href="https://tabnine.com" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Tabnine</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="productivity-tools" class="ai-tools-section">
+            <h2>Productivity & Writing</h2>
+            <div class="tools-grid">
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Notion AI</h3>
+                        <span class="tool-badge">Workspace</span>
+                    </div>
+                    <p class="tool-description">AI-powered workspace for notes, docs, and project management. Generate content, summarize text, and organize information intelligently.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Note-taking</span>
+                        <span class="feature-tag">Organization</span>
+                        <span class="feature-tag">Content Gen</span>
+                    </div>
+                    <a href="https://notion.so" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Notion</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Grammarly</h3>
+                        <span class="tool-badge">Writing</span>
+                    </div>
+                    <p class="tool-description">AI writing assistant that checks grammar, style, and tone. Helps improve clarity, engagement, and correctness in all your writing.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Grammar Check</span>
+                        <span class="feature-tag">Style Guide</span>
+                        <span class="feature-tag">Tone Analysis</span>
+                    </div>
+                    <a href="https://grammarly.com" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Grammarly</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Jasper</h3>
+                        <span class="tool-badge">Content</span>
+                    </div>
+                    <p class="tool-description">AI content creation platform for marketing copy, blog posts, and social media. Features templates and brand voice customization.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Marketing Copy</span>
+                        <span class="feature-tag">Templates</span>
+                        <span class="feature-tag">Brand Voice</span>
+                    </div>
+                    <a href="https://jasper.ai" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Jasper</a>
+                </article>
+
+                <article class="tool-card" data-tilt>
+                    <div class="tool-header">
+                        <h3>Otter.ai</h3>
+                        <span class="tool-badge">Transcription</span>
+                    </div>
+                    <p class="tool-description">AI-powered meeting transcription and note-taking. Automatically transcribe, summarize, and extract action items from meetings and conversations.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Transcription</span>
+                        <span class="feature-tag">Meeting Notes</span>
+                        <span class="feature-tag">Action Items</span>
+                    </div>
+                    <a href="https://otter.ai" target="_blank" rel="noopener" class="tool-link btn btn-primary">Try Otter.ai</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="recommendations" class="recommendations">
+            <h2>My Recommendations</h2>
+            <div class="recommendation-grid">
+                <div class="recommendation-card">
+                    <h3>For Beginners</h3>
+                    <p>Start with <strong>ChatGPT</strong> for general AI assistance and <strong>Canva</strong> for design needs. These tools are user-friendly and offer great free tiers.</p>
+                    <ul class="rec-list">
+                        <li>ChatGPT - Conversational AI</li>
+                        <li>Canva - Design & Graphics</li>
+                        <li>Grammarly - Writing Assistant</li>
+                    </ul>
+                </div>
+                <div class="recommendation-card">
+                    <h3>For Developers</h3>
+                    <p>Enhance your coding workflow with <strong>GitHub Copilot</strong> or <strong>Cursor</strong>. Use <strong>Perplexity</strong> for technical research and documentation.</p>
+                    <ul class="rec-list">
+                        <li>GitHub Copilot - Code Assistant</li>
+                        <li>Cursor - AI Code Editor</li>
+                        <li>Perplexity - Technical Research</li>
+                    </ul>
+                </div>
+                <div class="recommendation-card">
+                    <h3>For Content Creators</h3>
+                    <p>Combine <strong>Claude</strong> for thoughtful writing, <strong>Midjourney</strong> for visuals, and <strong>Notion AI</strong> for organization and planning.</p>
+                    <ul class="rec-list">
+                        <li>Claude - Content Writing</li>
+                        <li>Midjourney - Visual Content</li>
+                        <li>Notion AI - Organization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started" class="get-started">
+            <h2>Ready to Explore AI?</h2>
+            <div class="cta-content">
+                <p>Need personalized recommendations or help getting started with AI tools? I offer consultations and workshops to help you find the right AI solutions for your specific needs.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Get Personal Recommendations</a>
+                    <a href="index.html#services" class="btn btn-secondary">Book a Workshop</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jiyanshi Devmurari. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>

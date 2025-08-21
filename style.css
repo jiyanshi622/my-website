@@ -392,6 +392,213 @@ section:nth-of-type(6) { animation-delay: 1.0s; }
 section:nth-of-type(7) { animation-delay: 1.2s; }
 section:nth-of-type(8) { animation-delay: 1.4s; }
 
+/* AI Tools Page Styles */
+.ai-tools-section {
+    margin-bottom: 3rem;
+}
+
+.ai-tools-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.tool-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-link-hover));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tool-card:hover::before {
+    opacity: 1;
+}
+
+.tool-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px 0 rgba(58, 122, 254, 0.15);
+}
+
+.tool-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.tool-header h3 {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.tool-badge {
+    background: var(--color-primary);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tool-description {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.tool-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.feature-tag {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tool-link {
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Recommendations Section */
+.recommendations {
+    background: var(--color-card);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+}
+
+.recommendations h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.recommendation-card {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+}
+
+.recommendation-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+}
+
+.recommendation-card p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.rec-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rec-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.rec-list li:last-child {
+    border-bottom: none;
+}
+
+/* Get Started Section */
+.get-started {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(58,122,254,0.1), rgba(23,78,166,0.05));
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.get-started h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Dark theme support for AI tools */
+[data-theme="dark"] .tool-card,
+[data-theme="dark"] .recommendation-card {
+    background: rgba(35, 42, 54, 0.7);
+    border: 1px solid rgba(123, 182, 255, 0.10);
+}
+
+[data-theme="dark"] .tool-card:hover {
+    background: rgba(58, 122, 254, 0.10);
+}
+
+[data-theme="dark"] .feature-tag {
+    background: rgba(123, 182, 255, 0.15);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .recommendation-card {
+    background: rgba(17, 24, 39, 0.8);
+}
+
 /* Responsive for new grids */
 @media (max-width: 700px) {
     .hero-grid { grid-template-columns: 1fr; }
@@ -405,4 +612,23 @@ section:nth-of-type(8) { animation-delay: 1.4s; }
     .site-logo { width: 52px; height: 52px; }
     .site-title h1 { font-size: 1.6rem; }
     .tagline { font-size: 0.95rem; }
+    
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .tool-card {
+        padding: 1.2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
 }
